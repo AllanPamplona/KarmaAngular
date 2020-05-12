@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { RomanService } from './roman.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [RomanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
